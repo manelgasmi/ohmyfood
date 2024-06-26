@@ -2,6 +2,8 @@ $font-stack: Roboto, sans-serif;
 $font-logo: Shrikhand, serif;
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
+$primary-color-hover: #aa80dd;
+$secondary-color-hover: #fcaee6;
 $tertiary-color: #99e2d0;
 $main-bg-color: #f6f6f6;
 $footer-bg-color: #353535;
@@ -91,21 +93,20 @@ body {
   color: #ffffff;
   margin-top: 10px;
   padding: 15px 30px;
-  background-image: linear-gradient(
+  background: linear-gradient(
     to bottom,
     $secondary-color,
     $primary-color
   ); 
-    /*cursor: pointer; 
-    overflow: hidden;
-    position: relative;
-    transition: all 450ms;
+  transition: all .3s ease-in-out;
     &:hover {
-        background-color: blue;
-    }*/ /*animation bouton*/
+        opacity: .7;
+        box-shadow: 0px 12px 6px -6px rgba(0, 0, 0, 0.15);
+    }
 
   @include shadow;
 }
+
 .section-title {
   @include padding-margin-title;
 }

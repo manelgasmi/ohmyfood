@@ -205,12 +205,24 @@ body {
 }
 
 i.heart {
-  /*à verifier*/
-
   padding-right: 25px;
   font-size: 25px;
+  position: absolute;
+  right: 0;
+  &.fa-solid {
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    &:hover, &:focus, &:visited {
+      opacity: 1;
+    }
+  }
 }
-
+.fa-gradient {
+	background: -webkit-gradient(linear, left top, left bottom, from($secondary-color), to($primary-color));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 footer {
   background-color: $footer-bg-color;
   color: $clr-txt-ftr;

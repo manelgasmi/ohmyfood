@@ -200,14 +200,21 @@ i.heart.fa-solid {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
-i.heart.fa-solid:hover {
+i.heart.fa-solid:hover, i.heart.fa-solid:focus, i.heart.fa-solid:visited {
+  opacity: 1;
+}
+i.heart.fa-regular {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+i.heart.fa-regular:hover, i.heart.fa-regular:focus, i.heart.fa-regular:visited {
   opacity: 1;
 }
 
 .fa-gradient {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -245,7 +252,52 @@ ul i {
   .container {
     max-width: 1055px;
   }
+  .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .restaurants-cards .card {
+    min-width: 30rem;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+  }
+  footer h3 {
+    padding-top: 50px;
+    padding-right: 50px;
+  }
+  .nav-bar {
+    display: flex;
+    padding-right: 60px;
+  }
+  ul {
+    display: flex;
+    padding-top: 50px;
+  }
+  ul li {
+    padding-right: 15px;
+  }
+  .steps__functionning {
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
 }
+.loader {
+  position: fixed;
+  background-color: rgb(212, 216, 216);
+  height: 100%;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.5;
+  animation: loader-desapear 1s forwards;
+}
+
+/*the same style of index.html*/
 .header {
   display: flex;
 }
@@ -305,8 +357,36 @@ ul i {
 .menu-cards .card {
   padding: 0 15px;
 }
-.menu-cards .card-content {
+.menu-cards .card .card-content {
   padding-left: 0;
+}
+
+/*animation of menu-cards*/
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.menu-cards--animation {
+  opacity: 0; /* Ensure elements are hidden initially */
+  animation: slideUp 1s ease forwards; /* forwards retains the end state of the animation */
+  /* Loop through elements */
+  /* Loop through elements */
+  /* Loop through elements */
+}
+.menu-cards--animation-1 {
+  animation-delay: 0s;
+}
+.menu-cards--animation-2 {
+  animation-delay: 1s;
+}
+.menu-cards--animation-3 {
+  animation-delay: 2s;
 }
 
 .rest-btn {

@@ -25,6 +25,9 @@
   </head>
 
   <body>
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
     <div class="main-container">
       <header class="header">
         <a href="">
@@ -47,114 +50,168 @@
         <section class="rest-container bg-grey container">
           <div class="title-container">
             <h1>La palette du goût</h1>
-            <i class="fa-regular fa-heart heart "></i>
+            <i class="fa-regular fa-heart heart"></i>
             <i class="fa-solid fa-heart heart fa-gradient"></i>
           </div>
           <div class="menu-cards menu-cards--animation menu-cards--animation-1">
             <h3 class="menu-title">ENTRÉES</h3>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-1" />
+              <label class="card-content" for="checkmenu-1">
                 <div class="txt-card">
                   <h3 class="card-title">Fricassé d'escargots</h3>
-                  <p class="card-subtitle">Au piment d'Espelette></p>
+                  <p class="card-subtitle">Au piment d'Espelette</p>
                 </div>
-                <span>
-                    <strong>25€</strong>
+                <span class="menu-price">
+                  <strong>25€</strong>
                 </span>
-              </div>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
+                </div>
+              </label>
             </article>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-2" />
+              <label class="card-content" for="checkmenu-2">
                 <div class="txt-card">
                   <h3 class="card-title">Foie gras de canard mi-cuit</h3>
                   <p class="card-subtitle">Et ses copeaux de truffe noire</p>
                 </div>
-                <span>
-                    <strong>35€</strong>
+                <span class="menu-price">
+                  <strong>35€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-3" />
+              <label class="card-content" for="checkmenu-3">
                 <div class="txt-card">
                   <h3 class="card-title">Œuf au plat</h3>
-                  <p class="card-subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                  <p class="card-subtitle">
+                    Assaisonné à la truffe sur lit de caviar
+                  </p>
                 </div>
-                <span>
-                    <strong>20€</strong>
+                <span class="menu-price">
+                  <strong>20€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
-          </div> 
+          </div>
           <div class="menu-cards menu-cards--animation menu-cards--animation-2">
             <h3 class="menu-title">PLATS</h3>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-4" />
+              <label class="card-content" for="checkmenu-4">
                 <div class="txt-card">
                   <h3 class="card-title">Filet de bœuf aux herbes</h3>
-                  <p class="card-subtitle">Accomagné de sa ribambelle de légumes</p>
+                  <p class="card-subtitle">
+                    Accomagné de sa ribambelle de légumes
+                  </p>
                 </div>
-                <span>
-                    <strong>40€</strong>
+                <span class="menu-price"> 
+                  <strong>40€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-5" />
+              <label class="card-content" for="checkmenu-5">
                 <div class="txt-card">
                   <h3 class="card-title">Parmentier de queue de bœuf</h3>
-                  <p class="card-subtitle">À la truffe noire sur sa purée de panais</p>
+                  <p class="card-subtitle">
+                    À la truffe noire sur sa purée de panais
+                  </p>
                 </div>
-                <span>
-                    <strong>35€</strong>
+                <span class="menu-price">
+                  <strong>35€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-6" />
+              <label class="card-content" for="checkmenu-6">
                 <div class="txt-card">
                   <h3 class="card-title">Filet de trubot</h3>
                   <p class="card-subtitle">Aux agrumes</p>
                 </div>
-                <span>
-                    <strong>44€</strong>
+                <span class="menu-price">
+                  <strong>44€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
           </div>
           <div class="menu-cards menu-cards--animation menu-cards--animation-3">
             <h3 class="menu-title">DESSERT</h3>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-7" />
+              <label class="card-content" for="checkmenu-7">
                 <div class="txt-card">
                   <h3 class="card-title">Paris-Brest</h3>
                   <p class="card-subtitle">Revisité</p>
                 </div>
-                <span>
+                <span class="menu-price">
                   <strong>18€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-8" />
+              <label class="card-content" for="checkmenu-8">
                 <div class="txt-card">
                   <h3 class="card-title">Macaron au chocolat d'exception</h3>
                   <p class="card-subtitle">glace à la vanille de Madagascar</p>
                 </div>
-                <span>
-                    <strong>22€</strong>
+                <span class="menu-price">
+                  <strong>22€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
             <article class="card">
-              <div class="card-content">
+              <input type="checkbox" class="menu-checkbox hidden-ckeckbox" id="checkmenu-9" />
+              <label class="card-content" for="checkmenu-9">
                 <div class="txt-card">
                   <h3 class="card-title">Mousse au chocolat</h3>
-                  <p class="card-subtitle">piment d'Espelette et à la truffe noire</p>
+                  <p class="card-subtitle">
+                    piment d'Espelette et à la truffe noire
+                  </p>
                 </div>
-                <span>
-                    <strong>23€</strong>
+                <span class="menu-price">
+                  <strong>23€</strong>
                 </span>
+                <div class="checkbox">
+                  <div class="checkbox__circle">
+                    <i class="fa-solid fa-check checkbox__circle--mark"></i>
+                  </div>
               </div>
             </article>
           </div>

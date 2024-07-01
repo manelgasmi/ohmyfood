@@ -1,6 +1,5 @@
 @import "../sass/style.scss"; /*the same style of index.html*/
 
-
 .header {
   display: flex;
   i {
@@ -54,13 +53,35 @@
   margin-top: 40px;
 
   .card {
-    padding: 0 15px;
+    padding-left: 15px;
+    overflow: hidden;
     .card-content {
       padding-left: 0;
+      overflow: hidden;
+      justify-content: initial;
+
+      .txt-card {
+        width: 85%;
+        transition: 0.5s ease-in-out;
+        .card-title, .card-subtitle {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          padding-right: 10px;
+        }
+      }
+      .menu-price {
+        width: 15%;
+        margin-right: 15px;
+        padding-top: 22px;
+      }
     }
   }
 }
 
+.hidden-ckeckbox {
+  display: none;
+}
 /*animation of menu-cards*/
 @keyframes slideUp {
   from {
@@ -74,9 +95,9 @@
 }
 
 .menu-cards--animation {
-  opacity: 0; /* Ensure elements are hidden initially */
-  animation: slideUp 1s ease forwards; /* forwards retains the end state of the animation */
-  @for $i from 1 through 3 { /* Loop through elements */
+  opacity: 0;
+  animation: slideUp 1s ease forwards;
+  @for $i from 1 through 3 {
     &-#{$i} {
       animation-delay: #{$i - 1}s;
     }
@@ -88,5 +109,62 @@
   .btn {
     padding: 15px 45px;
     margin-top: 15px;
+  }
+}
+
+.checkbox {
+  @include flex-center;
+  height: 73px;
+  width: 80px;
+  margin-right: -77px;
+  background-color: $tertiary-color;
+  transition: 0.5s ease-in-out;
+  &__circle {
+    @include flex-center;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    &--mark {
+      color: $tertiary-color;
+    }
+  }
+}
+
+input.menu-checkbox:checked + label.card-content {
+  .checkbox {
+    margin-right: 0;
+  }
+  .txt-card {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-cards {
+    .card {
+      .card-content {
+        &:hover {
+          .checkbox {
+            margin-right: 0;
+          }
+        }
+        .txt-card {
+          width: 95%;
+        }
+       
+        .menu-price {
+          width: 5%;
+        }
+        .checkbox {
+          margin-right: -80px;
+        }
+      }
+    }
+  }
+  input.menu-checkbox:checked + label.card-content {
+    .txt-card {
+      width: 95%;
+    }
   }
 }

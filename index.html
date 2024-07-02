@@ -25,7 +25,15 @@
   </head>
 
   <body>
-    <div class="main-container">
+    <div class="loader-container">
+      <div class="load load__bar load__bar--1"></div>
+      <div class="load load__bar load__bar--2"></div>
+      <div class="load load__bar load__bar--3"></div>
+      <div class="load load__bar load__bar--4"></div>
+      <div class="load load__bar load__bar--5"></div>
+    </div>
+
+    <div class="main-container" id="content">
       <header class="header">
         <a href="">
           <img
@@ -47,13 +55,15 @@
               Découvrez des restaurants d'exception, <br />
               sélectionnés par nos soins.
             </p>
-            <button class="btn">Explorer nos retaurants</button>
+            <a href="#explorer-nos-restaurants">
+              <button class="btn">Explorer nos retaurants</button>
+            </a>
           </div>
         </section>
         <section class="functionning-section container">
           <h2 class="section-title">Fonctionnement</h2>
           <section class="steps__functionning">
-            <article class="article__functionning card ">
+            <article class="article__functionning card">
               <span>1</span>
               <div class="article__functionning--content">
                 <i class="fa-solid fa-mobile-screen-button article__i"></i>
@@ -78,11 +88,11 @@
         </section>
         <section class="bg-grey">
           <div class="container">
-            <h2 class="section-title" id="explorer-nos-restaurant">
+            <h2 class="section-title" id="explorer-nos-restaurants">
               Restaurants
             </h2>
             <div class="restaurants-cards">
-              <a href="">
+              <a href="./restaurants/rest1.html">
                 <article class="card">
                   <div class="new">
                     <span>Nouveau</span>
@@ -96,7 +106,7 @@
                       <h3 class="card-title">La palette du goût</h3>
                       <p class="card-subtitle">Ménilmontant</p>
                     </div>
-                    <i class="fa-regular fa-heart heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                     <i class="fa-solid fa-heart heart fa-gradient"></i>
                   </div>
                 </article>
@@ -116,7 +126,7 @@
                       <h3 class="card-title">La note enchantée</h3>
                       <p class="card-subtitle">Charonne</p>
                     </div>
-                    <i class="fa-regular fa-heart heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                     <i class="fa-solid fa-heart heart fa-gradient"></i>
                   </div>
                 </article>
@@ -132,7 +142,7 @@
                       <h3 class="card-title">A la française</h3>
                       <p class="card-subtitle">Cité Rouge</p>
                     </div>
-                    <i class="fa-regular fa-heart heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                     <i class="fa-solid fa-heart heart fa-gradient"></i>
                   </div>
                 </article>
@@ -148,7 +158,7 @@
                       <h3 class="card-title">La délice des sens</h3>
                       <p class="card-subtitle">Folie-Méricourt</p>
                     </div>
-                    <i class="fa-regular fa-heart heart "></i>
+                    <i class="fa-regular fa-heart heart"></i>
                     <i class="fa-solid fa-heart heart fa-gradient"></i>
                   </div>
                 </article>

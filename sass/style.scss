@@ -12,6 +12,8 @@ $clr-bg-adress: #eaeaea;
 $clr-bg-new: #99e2d0;
 $clr-txt-new: #008766;
 
+@import "loader.scss";
+
 h1,
 h2,
 h3 {
@@ -28,6 +30,7 @@ h3 {
   padding-bottom: 20px;
   margin: 0;
 }
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -87,22 +90,17 @@ body {
   text-align: center;
 }
 .btn {
-  
   border-radius: 25px;
   border: none;
   color: #ffffff;
   margin-top: 10px;
   padding: 15px 30px;
-  background: linear-gradient(
-    to bottom,
-    $secondary-color,
-    $primary-color
-  ); 
-  transition: all .3s ease-in-out;
-    &:hover {
-        opacity: .7;
-        box-shadow: 0px 12px 6px -6px rgba(0, 0, 0, 0.15);
-    }
+  background: linear-gradient(to bottom, $secondary-color, $primary-color);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+    box-shadow: 0px 12px 6px -6px rgba(0, 0, 0, 0.15);
+  }
 
   @include shadow;
 }
@@ -172,6 +170,7 @@ body {
       .card-title {
         margin-bottom: 5px;
         margin-top: 10px;
+        font-size: 18px;
       }
       .card-subtitle {
         margin-top: 0;
@@ -211,18 +210,36 @@ i.heart {
   right: 0;
   &.fa-solid {
     opacity: 0;
-    transition: all .3s ease-in-out;
-    &:hover, &:focus, &:visited {
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus,
+    &:visited {
+      opacity: 1;
+    }
+  }
+  &.fa-regular {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &:hover,
+    &:focus,
+    &:visited {
       opacity: 1;
     }
   }
 }
 .fa-gradient {
-	background: -webkit-gradient(linear, left top, left bottom, from($secondary-color), to($primary-color));
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from($secondary-color),
+    to($primary-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 footer {
   background-color: $footer-bg-color;
   color: $clr-txt-ftr;
@@ -232,7 +249,7 @@ footer {
   h3 {
     color: white;
     font-family: $font-logo;
-    font-weight: 300; 
+    font-weight: 300;
     margin-top: 0;
     padding-top: 20px;
     padding-left: 20px;
@@ -256,9 +273,42 @@ ul {
     padding-right: 15px;
   }
 }
-
 @media (min-width: 1024px) {
   .container {
     max-width: 1055px;
+  }
+  .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    .card {
+      min-width: 30rem;
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+    h3 {
+      padding-top: 50px;
+      padding-right: 50px;
+    }
+  }
+  .nav-bar {
+    display: flex;
+    padding-right: 60px;
+  }
+  ul {
+    display: flex;
+    padding-top: 50px;
+    li {
+      padding-right: 15px;
+    }
+  }
+  .steps__functionning {
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 30px;
   }
 }

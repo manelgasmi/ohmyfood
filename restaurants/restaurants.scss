@@ -34,7 +34,6 @@
   align-items: center;
 }
 .menu-title {
-  font-size: 18px;
   font-weight: normal;
   margin-bottom: 20px;
   position: relative;
@@ -68,6 +67,7 @@
           overflow: hidden;
           white-space: nowrap;
           padding-right: 10px;
+          font-size: 15px;
         }
       }
       .menu-price {

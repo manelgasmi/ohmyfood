@@ -125,8 +125,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-.adress__section i {
-  margin-right: 17px;
+.adress__section input {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #eaeaea;
+  border: none;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 120px;
+}
+.adress__section input:focus {
+  outline: none;
 }
 
 .first-section {
@@ -273,13 +283,6 @@ i.heart.fa-solid {
 i.heart.fa-solid:hover, i.heart.fa-solid:focus, i.heart.fa-solid:visited {
   opacity: 1;
 }
-i.heart.fa-regular {
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-i.heart.fa-regular:hover, i.heart.fa-regular:focus, i.heart.fa-regular:visited {
-  opacity: 1;
-}
 
 .fa-gradient {
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
@@ -301,6 +304,7 @@ footer h3 {
   margin-top: 0;
   padding-top: 20px;
   padding-left: 20px;
+  padding-bottom: 10px;
 }
 footer i {
   width: 15px;
@@ -425,18 +429,20 @@ ul i {
 .menu-cards .card .card-content .txt-card {
   width: 85%;
   transition: 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu-cards .card .card-content .txt-card .card-title, .menu-cards .card .card-content .txt-card .card-subtitle {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  padding-right: 10px;
   font-size: 15px;
 }
 .menu-cards .card .card-content .menu-price {
   width: 15%;
-  margin-right: 15px;
   padding-top: 22px;
+  padding-left: 10px;
 }
 
 .hidden-ckeckbox {
@@ -482,9 +488,9 @@ ul i {
   align-items: center;
   height: 73px;
   width: 80px;
-  margin-right: -77px;
+  margin-right: -78px;
   background-color: #99e2d0;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease;
 }
 .checkbox__circle {
   display: flex;
@@ -501,9 +507,6 @@ ul i {
 
 input.menu-checkbox:checked + label.card-content .checkbox {
   margin-right: 0;
-}
-input.menu-checkbox:checked + label.card-content .txt-card {
-  width: 65%;
 }
 
 @media (min-width: 1024px) {

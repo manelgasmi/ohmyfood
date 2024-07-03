@@ -62,18 +62,21 @@
       .txt-card {
         width: 85%;
         transition: 0.5s ease-in-out;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
         .card-title, .card-subtitle {
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
-          padding-right: 10px;
           font-size: 15px;
         }
       }
       .menu-price {
         width: 15%;
-        margin-right: 15px;
+        // margin-right: 15px;
         padding-top: 22px;
+        padding-left: 10px;
       }
     }
   }
@@ -116,9 +119,9 @@
   @include flex-center;
   height: 73px;
   width: 80px;
-  margin-right: -77px;
+  margin-right: -78px;
   background-color: $tertiary-color;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease;
   &__circle {
     @include flex-center;
     background-color: #fff;
@@ -134,9 +137,6 @@
 input.menu-checkbox:checked + label.card-content {
   .checkbox {
     margin-right: 0;
-  }
-  .txt-card {
-    width: 65%;
   }
 }
 

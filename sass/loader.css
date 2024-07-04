@@ -38,7 +38,7 @@
 }
 .load__bar {
   background-color: #9356dc;
-  height: 100p;
+  height: 100px;
   width: 3px;
   animation: bars 1000ms ease-in-out backwards infinite;
   animation-direction: alternate;

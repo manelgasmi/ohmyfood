@@ -187,9 +187,13 @@ body {
         margin-bottom: 5px;
         margin-top: 10px;
         font-size: 18px;
+        font-weight: bold;
+        display: block;
       }
       .card-subtitle {
         margin-top: 0;
+        margin-bottom: 1em;
+        display: block;
       }
     }
   }
@@ -221,7 +225,7 @@ body {
 .heart-container {
   width: 25px;
   height: 25px;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 i.heart {
   padding-right: 25px;
@@ -284,7 +288,7 @@ ul {
     padding-right: 15px;
   }
 }
-/*****media queries version Desktop****/
+/*****media queries Desktop version****/
 @media (min-width: 1024px) {
   .container {
     max-width: 1055px;
@@ -324,7 +328,7 @@ ul {
     padding-bottom: 30px;
   }
 }
-/*****media queries version tablette*****/
+/*****media queries tablet version*****/
 /****j'ai répété le code du desktop***/
 @media (min-width: 768px) and (max-width: 1023px) {
   footer {
@@ -344,13 +348,21 @@ ul {
     display: flex;
     padding-top: 50px;
     li {
-      padding-right: 15px;
+      padding-right: 6px;
+      font-size: 14px;
     }
   }
   .steps__functionning {
     flex-direction: row;
     gap: 20px;
     padding-bottom: 30px;
+    .article__functionning--content {
+      padding-left: 24px;
+      font-size: 14px;
+    }
+    i {
+      padding-right: 9px;
+    }
   }
   .restaurants-cards {
     display: flex;

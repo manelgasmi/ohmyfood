@@ -39,7 +39,7 @@
 }
 .load__bar {
   background-color: #9356dc;
-  height: 100p;
+  height: 100px;
   width: 3px;
   animation: bars 1000ms ease-in-out backwards infinite;
   animation-direction: alternate;
@@ -130,7 +130,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.adress__section input {
+.adress__section input.search {
   font-size: 16px;
   font-weight: 500;
   background-color: #eaeaea;
@@ -140,7 +140,7 @@ body {
   padding-right: 10px;
   width: 120px;
 }
-.adress__section input:focus {
+.adress__section input.search:focus {
   outline: none;
 }
 
@@ -242,9 +242,13 @@ body {
   margin-bottom: 5px;
   margin-top: 10px;
   font-size: 18px;
+  font-weight: bold;
+  display: block;
 }
 .card .card-content .txt-card .card-subtitle {
   margin-top: 0;
+  margin-bottom: 1em;
+  display: block;
 }
 
 .restaurants-cards {
@@ -279,7 +283,7 @@ body {
 .heart-container {
   width: 25px;
   height: 25px;
-  margin-right: 10px;
+  margin-right: 30px;
 }
 
 i.heart {
@@ -333,7 +337,7 @@ ul i {
   padding-right: 15px;
 }
 
-/*****media queries version Desktop****/
+/*****media queries Desktop version****/
 @media (min-width: 1024px) {
   .container {
     max-width: 1055px;
@@ -373,7 +377,7 @@ ul i {
     padding-bottom: 30px;
   }
 }
-/*****media queries version tablette*****/
+/*****media queries tablet version*****/
 /****j'ai répété le code du desktop***/
 @media (min-width: 768px) and (max-width: 1023px) {
   footer {
@@ -394,12 +398,20 @@ ul i {
     padding-top: 50px;
   }
   ul li {
-    padding-right: 15px;
+    padding-right: 6px;
+    font-size: 14px;
   }
   .steps__functionning {
     flex-direction: row;
     gap: 20px;
     padding-bottom: 30px;
+  }
+  .steps__functionning .article__functionning--content {
+    padding-left: 24px;
+    font-size: 14px;
+  }
+  .steps__functionning i {
+    padding-right: 9px;
   }
   .restaurants-cards {
     display: flex;
@@ -476,20 +488,23 @@ ul i {
   overflow: hidden;
   justify-content: initial;
 }
-.menu-cards .card .card-content .txt-card {
+
+.txt-card {
   width: 85%;
   transition: 0.5s ease-in-out;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.menu-cards .card .card-content .txt-card .card-title, .menu-cards .card .card-content .txt-card .card-subtitle {
+.txt-card .card-title,
+.txt-card .card-subtitle {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   font-size: 15px;
 }
-.menu-cards .card .card-content .menu-price {
+
+.menu-price {
   width: 15%;
   padding-top: 22px;
   padding-left: 10px;
@@ -555,7 +570,7 @@ ul i {
   color: #99e2d0;
 }
 
-input.menu-checkbox:checked + label.card-content .checkbox {
+input.menu-checkbox:checked + .card-content .checkbox {
   margin-right: 0;
 }
 
@@ -579,10 +594,26 @@ input.menu-checkbox:checked + label.card-content .checkbox {
   .menu-cards .card .card-content .checkbox {
     margin-right: -90px;
   }
-  input.menu-checkbox:checked + label.card-content .txt-card {
+  input.menu-checkbox:checked + .card-content .txt-card {
     width: 95%;
   }
   h1 {
     text-align: center;
+  }
+}
+/*****media queries tablet version*****/
+/****j'ai répété le code du desktop***/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-cards .card .card-content:hover .checkbox {
+    margin-right: 0;
+  }
+  .menu-cards .card .card-content .txt-card {
+    width: 90%;
+  }
+  .menu-cards .card .card-content .menu-price {
+    width: 10%;
+  }
+  .menu-cards .card .card-content .checkbox {
+    margin-right: -90px;
   }
 }/*# sourceMappingURL=restaurants.css.map */

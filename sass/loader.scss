@@ -47,7 +47,7 @@ $anim-delay: $anim-dur / 5;
   justify-content: space-evenly;
   &__bar {
       background-color: $cd-bars;
-      height: 100p;
+      height: 100px;
       width: $size;
       animation: bars $anim-dur ease-in-out backwards infinite;
       animation-direction: alternate;

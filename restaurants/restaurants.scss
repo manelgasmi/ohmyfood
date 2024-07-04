@@ -58,28 +58,28 @@
       padding-left: 0;
       overflow: hidden;
       justify-content: initial;
-
-      .txt-card {
-        width: 85%;
-        transition: 0.5s ease-in-out;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        .card-title, .card-subtitle {
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-          font-size: 15px;
-        }
-      }
-      .menu-price {
-        width: 15%;
-        // margin-right: 15px;
-        padding-top: 22px;
-        padding-left: 10px;
-      }
     }
   }
+}
+
+.txt-card {
+  width: 85%;
+  transition: 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  .card-title,
+  .card-subtitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+}
+.menu-price {
+  width: 15%;
+  padding-top: 22px;
+  padding-left: 10px;
 }
 
 .hidden-ckeckbox {
@@ -134,14 +134,13 @@
   }
 }
 
-input.menu-checkbox:checked + label.card-content {
+input.menu-checkbox:checked + .card-content {
   .checkbox {
     margin-right: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  
   .title-container {
     justify-content: center;
     gap: 30px;
@@ -160,7 +159,7 @@ input.menu-checkbox:checked + label.card-content {
         .txt-card {
           width: 95%;
         }
-       
+
         .menu-price {
           width: 5%;
         }
@@ -170,12 +169,38 @@ input.menu-checkbox:checked + label.card-content {
       }
     }
   }
-  input.menu-checkbox:checked + label.card-content {
+  input.menu-checkbox:checked + .card-content {
     .txt-card {
       width: 95%;
     }
   }
   h1 {
     text-align: center;
+  }
+}
+
+/*****media queries tablet version*****/
+/****j'ai répété le code du desktop***/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-cards {
+    .card {
+      .card-content {
+        &:hover {
+          .checkbox {
+            margin-right: 0;
+          }
+        }
+        .txt-card {
+          width: 90%;
+        }
+
+        .menu-price {
+          width: 10%;
+        }
+        .checkbox {
+          margin-right: -90px;
+        }
+      }
+    }
   }
 }

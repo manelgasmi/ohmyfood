@@ -24,12 +24,12 @@
   h1 {
     font-family: Shrikhand, serif;
     font-size: 28px;
+    width: 80%;
   }
 }
 
 .title-container {
   display: flex;
-  position: relative;
   justify-content: space-between;
   align-items: center;
 }
@@ -119,7 +119,7 @@
   @include flex-center;
   height: 73px;
   width: 80px;
-  margin-right: -78px;
+  margin-right: -90px;
   background-color: $tertiary-color;
   transition: 0.3s ease;
   &__circle {
@@ -141,6 +141,14 @@ input.menu-checkbox:checked + label.card-content {
 }
 
 @media (min-width: 1024px) {
+  
+  .title-container {
+    justify-content: center;
+    gap: 30px;
+    h1 {
+      width: auto;
+    }
+  }
   .menu-cards {
     .card {
       .card-content {
@@ -157,7 +165,7 @@ input.menu-checkbox:checked + label.card-content {
           width: 5%;
         }
         .checkbox {
-          margin-right: -80px;
+          margin-right: -90px;
         }
       }
     }
@@ -166,5 +174,8 @@ input.menu-checkbox:checked + label.card-content {
     .txt-card {
       width: 95%;
     }
+  }
+  h1 {
+    text-align: center;
   }
 }

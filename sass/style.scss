@@ -20,6 +20,9 @@ h3 {
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-weight: 500;
+}
 @mixin shadow {
   box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -49,9 +52,9 @@ a {
 }
 .container {
   width: 100%;
-  max-width: 90%;
   margin: auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 body {
   display: flex;
@@ -79,8 +82,20 @@ body {
   @include shadow;
   @include flex-center;
 
-  i {
-    margin-right: 17px;
+  input {
+    &.search {
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #eaeaea;
+      border: none;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 120px;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
 .first-section {
@@ -97,6 +112,7 @@ body {
   padding: 15px 30px;
   background: linear-gradient(to bottom, $secondary-color, $primary-color);
   transition: all 0.3s ease-in-out;
+  display: inline-block;
   &:hover {
     opacity: 0.7;
     box-shadow: 0px 12px 6px -6px rgba(0, 0, 0, 0.15);
@@ -202,22 +218,16 @@ body {
     }
   }
 }
-
+.heart-container {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
 i.heart {
   padding-right: 25px;
   font-size: 25px;
   position: absolute;
-  right: 0;
   &.fa-solid {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    &:hover,
-    &:focus,
-    &:visited {
-      opacity: 1;
-    }
-  }
-  &.fa-regular {
     opacity: 0;
     transition: all 0.3s ease-in-out;
     &:hover,
@@ -253,6 +263,7 @@ footer {
     margin-top: 0;
     padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 10px;
   }
 
   i {
@@ -273,6 +284,7 @@ ul {
     padding-right: 15px;
   }
 }
+/*****media queries version Desktop****/
 @media (min-width: 1024px) {
   .container {
     max-width: 1055px;
@@ -310,5 +322,43 @@ ul {
     flex-direction: row;
     gap: 20px;
     padding-bottom: 30px;
+  }
+}
+/*****media queries version tablette*****/
+/****j'ai répété le code du desktop***/
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+    h3 {
+      padding-top: 50px;
+      padding-right: 50px;
+    }
+  }
+  .nav-bar {
+    display: flex;
+    padding-right: 60px;
+  }
+  ul {
+    display: flex;
+    padding-top: 50px;
+    li {
+      padding-right: 15px;
+    }
+  }
+  .steps__functionning {
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+  .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    .card {
+      width: 46%;
+    }
   }
 }

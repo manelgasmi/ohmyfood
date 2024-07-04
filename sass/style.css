@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .loader-container {
   position: fixed;
   width: 100%;
@@ -74,6 +75,10 @@ h3 {
   padding: 0;
 }
 
+h1 {
+  font-weight: 500;
+}
+
 * {
   font-family: Roboto, sans-serif;
 }
@@ -89,9 +94,9 @@ a {
 
 .container {
   width: 100%;
-  max-width: 90%;
   margin: auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 body {
@@ -125,8 +130,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-.adress__section i {
-  margin-right: 17px;
+.adress__section input.search {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #eaeaea;
+  border: none;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 120px;
+}
+.adress__section input.search:focus {
+  outline: none;
 }
 
 .first-section {
@@ -144,6 +159,7 @@ body {
   padding: 15px 30px;
   background: linear-gradient(to bottom, #ff79da, #9356dc);
   transition: all 0.3s ease-in-out;
+  display: inline-block;
   box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.15);
   position: relative;
 }
@@ -260,24 +276,22 @@ body {
   color: #008766;
 }
 
+.heart-container {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
 i.heart {
   padding-right: 25px;
   font-size: 25px;
   position: absolute;
-  right: 0;
 }
 i.heart.fa-solid {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
 i.heart.fa-solid:hover, i.heart.fa-solid:focus, i.heart.fa-solid:visited {
-  opacity: 1;
-}
-i.heart.fa-regular {
-  opacity: 0;
-  transition: all 0.3s ease-in-out;
-}
-i.heart.fa-regular:hover, i.heart.fa-regular:focus, i.heart.fa-regular:visited {
   opacity: 1;
 }
 
@@ -301,6 +315,7 @@ footer h3 {
   margin-top: 0;
   padding-top: 20px;
   padding-left: 20px;
+  padding-bottom: 10px;
 }
 footer i {
   width: 15px;
@@ -318,6 +333,7 @@ ul i {
   padding-right: 15px;
 }
 
+/*****media queries version Desktop****/
 @media (min-width: 1024px) {
   .container {
     max-width: 1055px;
@@ -355,5 +371,43 @@ ul i {
     flex-direction: row;
     gap: 20px;
     padding-bottom: 30px;
+  }
+}
+/*****media queries version tablette*****/
+/****j'ai répété le code du desktop***/
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+  }
+  footer h3 {
+    padding-top: 50px;
+    padding-right: 50px;
+  }
+  .nav-bar {
+    display: flex;
+    padding-right: 60px;
+  }
+  ul {
+    display: flex;
+    padding-top: 50px;
+  }
+  ul li {
+    padding-right: 15px;
+  }
+  .steps__functionning {
+    flex-direction: row;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+  .restaurants-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .restaurants-cards .card {
+    width: 46%;
   }
 }/*# sourceMappingURL=style.css.map */

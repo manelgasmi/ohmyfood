@@ -342,11 +342,11 @@ ul {
   }
   .nav-bar {
     display: flex;
-    padding-right: 60px;
   }
   ul {
     display: flex;
     padding-top: 50px;
+    gap: 10px;
     li {
       padding-right: 6px;
       font-size: 14px;

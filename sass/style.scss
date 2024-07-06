@@ -12,6 +12,18 @@ $clr-bg-adress: #eaeaea;
 $clr-bg-new: #99e2d0;
 $clr-txt-new: #008766;
 
+@mixin footer-media-queries {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+    h3 {
+      padding-top: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+
 @import "loader.scss";
 
 h1,
@@ -86,7 +98,7 @@ body {
     &.search {
       font-size: 16px;
       font-weight: 500;
-      background-color: #eaeaea;
+      background-color: $clr-bg-adress;
       border: none;
       text-align: center;
       padding-left: 10px;
@@ -131,7 +143,7 @@ body {
 }
 .article__functionning {
   height: 72px;
-  background-color: #f6f6f6;
+  background-color: $main-bg-color;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -293,24 +305,21 @@ ul {
   .container {
     max-width: 1055px;
   }
+  .adress__section {
+    box-shadow: none;
+  }
+  
   .restaurants-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
     .card {
-      min-width: 30rem;
+      width: 30rem;
+      max-width: 48%;
     }
   }
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 114px;
-    h3 {
-      padding-top: 50px;
-      padding-right: 50px;
-    }
-  }
+  @include footer-media-queries;
   .nav-bar {
     display: flex;
     padding-right: 60px;
@@ -329,17 +338,8 @@ ul {
   }
 }
 /*****media queries tablet version*****/
-/****j'ai répété le code du desktop***/
 @media (min-width: 768px) and (max-width: 1023px) {
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 114px;
-    h3 {
-      padding-top: 50px;
-      padding-right: 50px;
-    }
-  }
+  @include footer-media-queries;
   .nav-bar {
     display: flex;
   }

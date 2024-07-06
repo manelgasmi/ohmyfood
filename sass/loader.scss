@@ -37,7 +37,7 @@
 $cd-bars: #9356dc;
 $size: 3px;
 $anim-dur: 1000ms;
-$anim-delay: $anim-dur / 5;
+$anim-delay: calc($anim-dur / 5);
 
 .load {
   width: $size*10;

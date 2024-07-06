@@ -342,6 +342,9 @@ ul i {
   .container {
     max-width: 1055px;
   }
+  .adress__section {
+    box-shadow: none;
+  }
   .restaurants-cards {
     display: flex;
     flex-wrap: wrap;
@@ -349,7 +352,8 @@ ul i {
     justify-content: center;
   }
   .restaurants-cards .card {
-    min-width: 30rem;
+    width: 30rem;
+    max-width: 48%;
   }
   footer {
     display: flex;
@@ -378,7 +382,6 @@ ul i {
   }
 }
 /*****media queries tablet version*****/
-/****j'ai répété le code du desktop***/
 @media (min-width: 768px) and (max-width: 1023px) {
   footer {
     display: flex;

@@ -1,3 +1,5 @@
+@import "loader.scss";
+
 /****Basic styles for small screens (mobile first)****/
 
 $font-stack: Roboto, sans-serif;
@@ -13,30 +15,8 @@ $clr-txt-ftr: #ffffff;
 $clr-bg-adress: #eaeaea;
 $clr-bg-new: #99e2d0;
 $clr-txt-new: #008766;
+$color-grey: grey;
 
-@mixin footer-media-queries {
-  footer {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 114px;
-    h3 {
-      padding-top: 50px;
-      padding-right: 50px;
-    }
-  }
-}
-
-@import "loader.scss";
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
-}
-h1 {
-  font-weight: 500;
-}
 @mixin shadow {
   box-shadow: 0px 10px 6px -6px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -54,26 +34,52 @@ h1 {
   align-items: center;
 }
 
+
+@mixin footer-media-queries {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 114px;
+    h3 {
+      padding-top: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+
 * {
   font-family: $font-stack;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-weight: 500;
 }
 a {
   color: inherit;
   text-decoration: none;
 }
+
 .main-container {
   width: 100%;
 }
+
 .container {
   width: 100%;
   margin: auto;
   padding: 0 20px;
   box-sizing: border-box;
-}
-body {
-  display: flex;
-  justify-content: center;
-  margin: 0;
 }
 .header {
   display: flex;
@@ -89,6 +95,7 @@ body {
   padding-bottom: 18px;
   padding-top: 16px;
 }
+
 .adress__section {
   background-color: $clr-bg-adress;
   width: 100%;
@@ -131,13 +138,13 @@ body {
     opacity: 0.7;
     box-shadow: 0px 12px 6px -6px rgba(0, 0, 0, 0.15);
   }
-
   @include shadow;
 }
 
 .section-title {
   @include padding-margin-title;
 }
+
 .steps__functionning {
   display: flex;
   flex-direction: column;
@@ -174,8 +181,9 @@ body {
     }
   }
 }
+
 .article__i {
-  color: grey;
+  color: $color-grey;
   padding-right: 20px;
 
   &--store {
@@ -214,6 +222,7 @@ body {
     box-shadow: 0px 4px 4px -7px rgba(0, 0, 0, 0.1);
   }
 }
+
 .restaurants__cards {
   padding-bottom: 50px;
   &--new {
@@ -236,6 +245,7 @@ body {
     object-fit: cover;
   }
 }
+
 .heart-container {
   width: 25px;
   height: 25px;
@@ -293,17 +303,16 @@ footer {
     list-style: none;
     margin: 0;
     padding-inline-start: 20px;
-  
+
     li {
       padding-top: 5px;
     }
-  
+
     i {
       padding-right: 15px;
     }
   }
 }
-
 
 /*****media queries Desktop version****/
 @media (min-width: 1024px) {
@@ -351,6 +360,7 @@ footer {
   .nav-bar {
     display: flex;
   }
+
   ul {
     display: flex;
     padding-top: 50px;
